@@ -4,7 +4,9 @@ import { Container } from './styles';
 export function LandingPage(){
     return(
        <Container>
-            <h1>Landing page</h1>
+           <header></header>
+           {/* Telas */}
+           <footer></footer>
        </Container>
     )
 }

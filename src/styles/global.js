@@ -8,7 +8,9 @@ export default createGlobalStyle`
     box-sizing:border-box;
     border:0;
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
   }
+
 
   body{
     background: ${colors.white};
@@ -20,11 +22,20 @@ export default createGlobalStyle`
     font-size:16px
   }
 
-  h1,h2,h3,h4,h5,h6, strong{
+  h1{
     font-weight:900
+  }
+
+  h2{
+    font-weight: 700;
   }
 
   button{
     cursor:pointer
+  }
+
+  section{
+    max-width: 1920px;
+    max-height: 880px;
   }
 `;
