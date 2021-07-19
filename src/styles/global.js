@@ -9,13 +9,14 @@ export default createGlobalStyle`
     border:0;
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
+    scrollbar-width: 80px;
   }
 
 
   body{
     background: ${colors.white};
     color:${colors.secondary};
-    -webkit-font-smoothing:antialiased
+    -webkit-font-smoothing:antialiased;
   }
 
   body, button, input{
@@ -37,5 +38,7 @@ export default createGlobalStyle`
   section{
     max-width: 1920px;
     max-height: 880px;
+    min-width: calc(100vw - 80px);
+    min-height: 100vh;
   }
 `;

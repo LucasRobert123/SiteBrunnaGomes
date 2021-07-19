@@ -1,7 +1,8 @@
 import React from 'react';
+import { Container } from './styles';
 
 export function Procedures(){
-    return <section id="procedures">
+    return <Container id="procedures">
         
-    </section>
+    </Container>
 }
