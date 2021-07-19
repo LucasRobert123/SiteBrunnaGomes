@@ -24,7 +24,8 @@ export default createGlobalStyle`
   }
 
   h1{
-    font-weight:900
+    font-weight:900;
+    font-size: 56px;
   }
 
   h2{
