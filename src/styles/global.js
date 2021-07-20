@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import colors from './colors';
+import { createGlobalStyle } from "styled-components";
+import colors from "./colors";
 
 export default createGlobalStyle`
   *{
@@ -9,7 +9,7 @@ export default createGlobalStyle`
     border:0;
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
-    scrollbar-width: 80px;
+    scrollbar-width: 80px;    
   }
 
 
@@ -17,6 +17,7 @@ export default createGlobalStyle`
     background: ${colors.white};
     color:${colors.secondary};
     -webkit-font-smoothing:antialiased;
+    overflow-x: hidden;
   }
 
   body, button, input{

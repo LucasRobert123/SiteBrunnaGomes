@@ -16,13 +16,19 @@ export default function Header(props) {
       navLinks.classList.toggle("open");
       links.forEach((link) => {
         link.classList.toggle("fade");
+        const listener = () => {
+          hamburger.click();
+        };
+        link.addEventListener("click", listener);
+
+        return () => link.removeEventListener("click", listener);
       });
     };
 
     hamburger.addEventListener("click", handler);
 
     return () => hamburger.removeEventListener("click", handler);
-  }, []);
+  }, [toggle]);
 
   useEffect(() => {
     window.addEventListener("scroll", onScrolled);
@@ -33,9 +39,9 @@ export default function Header(props) {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
+    // const height =
+    //   document.documentElement.scrollHeight -
+    //   document.documentElement.clientHeight;
 
     const scrolled = winScroll / 250;
 
