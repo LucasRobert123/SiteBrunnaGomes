@@ -6,7 +6,7 @@ import { Procedures } from "../Procedures";
 import { Evaluation } from "../Evaluation";
 import { Courses } from "../Courses";
 import footerBg from "../../assets/svg/footer.svg";
-import logo from "../../assets/img/logo-white.png";
+import logo from "../../assets/svg/icon-white.svg";
 
 export function LandingPage() {
   const [headerBgOpacity, setHeaderBgOpacity] = useState(0);
@@ -24,7 +24,7 @@ export function LandingPage() {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
 
-    const scrolled = winScroll / 150;
+    const scrolled = winScroll / 250;
 
     setHeaderBgOpacity(scrolled > 1 ? 1 : scrolled);
   };
