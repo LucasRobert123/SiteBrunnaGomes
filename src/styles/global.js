@@ -37,8 +37,8 @@ export default createGlobalStyle`
   }
 
   section{
-    max-width: 1920px;
-    max-height: 880px;
+    max-width: 1920px !important;
+    max-height: 880px !important;
     min-width: calc(100vw - 80px);
     min-height: 100vh;
   }

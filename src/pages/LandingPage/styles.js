@@ -50,8 +50,87 @@ export const Header = styled.header`
 `;
 
 export const Footer = styled.footer`
+  position: relative;
   img {
     max-width: 100%;
     height: auto;
   }
 `;
+
+export const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  min-height: 200px;
+  background-color: ${colors.secondary};
+  margin-top: -10px;
+  padding: 16px 24px;
+
+  .logo-rodape{
+    height: 150px;
+  }
+  .location{
+    height: 150px;
+  }
+
+  @media(max-width:990px){
+    .logo-rodape{
+     height: 120px;
+    }
+    .location{
+      height: 120px;
+    }
+  }
+
+  @media(max-width:800px){
+    flex-direction: column;
+    .location{
+      height: 90px;
+    }
+  }
+`
+
+export const Socials = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:8px;
+
+  div{
+    color:${colors.white};
+    display: flex;
+    align-items: center;
+
+    p{
+      font-weight: 500;
+    }
+
+    img{
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+  }
+
+  @media(max-width:990px){
+    flex-direction: row;
+    div{
+      p{
+        font-size: 0px;
+      }
+    }
+  }
+
+  @media(max-width:800px){
+    margin-bottom: 16px;
+
+    div{
+      img{
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+`

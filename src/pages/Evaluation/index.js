@@ -13,7 +13,7 @@ export function Evaluation() {
     return <Container id="evaluation">
         <img src={ondasTop} alt="onda-top" />
         <Content>
-            <img src={iconAvaluation} alt="onda-top" />
+            <img src={iconAvaluation} alt="avaliação" />
             <ContainerTextAvaluation>
                 <h1>CONSULTA/AVALIAÇÃO</h1>
                 <p>
@@ -21,7 +21,7 @@ export function Evaluation() {
                     te ajudar com o meu trabalho. A avaliação é de extrema importância e
                     funciona como uma consulta farmacêutica. Ela tem o valor de 50 reais.
                     E podem ser agendada pelo celular e WhatsApp (35)98712-2891 ou faça uma visita no
-                    endereço físico: Rua 14 de maio, 323, São Benedito, Campos Gerais.-Mg, 13 de maio
+                    endereço físico: Rua 13 de maio, 323, São Benedito, Campos Gerais-Mg
                 </p>
             </ContainerTextAvaluation>
         </Content>

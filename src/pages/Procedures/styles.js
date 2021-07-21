@@ -2,7 +2,10 @@ import styled, { css } from 'styled-components';
 import colors from '../../styles/colors';
 
 export const Container = styled.section`
-  padding: 16px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export const HeaderSection = styled.div`
@@ -18,6 +21,15 @@ export const HeaderSection = styled.div`
       font-size: 32px;
    }
   }
+
+  @media(max-width: 750px){
+   img{
+    height: 16px;
+   }
+   h1{
+      font-size: 24px;
+   }
+  }
 `
 
 export const Content = styled.div`
@@ -28,6 +40,12 @@ export const Content = styled.div`
    @media(max-width: 1400px){
       height: 436px;
    }
+
+   @media(max-width: 750px){
+     p{
+        font-size: 16px;
+     }
+   }
 `
 
 export const ContainerListProcedures = styled.div`
@@ -35,6 +53,10 @@ export const ContainerListProcedures = styled.div`
    display: flex;
    justify-content: space-between;
    margin-top: 24px;
+
+   @media(max-width: 750px){
+      height: 94%;
+   }
 `
 
 export const ButtonProcedures = styled.button`
@@ -45,6 +67,9 @@ export const ButtonProcedures = styled.button`
    height: 100%;
    background-color: ${colors.secondary}20;
    border-radius: 20px;
+   transition: opacity ease 200ms;
+   border: 0;
+   outline: 0;
 
    @media(max-width: 1400px){
       width: 70px;
@@ -54,15 +79,38 @@ export const ButtonProcedures = styled.button`
          height: 80px;
       }
    }
-
+   
    ${props => props.disabled && css`
       opacity: 0.5;
    `}
+
+   @media(max-width: 750px){
+      width: 55px;
+
+      img{
+         width: 60px;
+         height: 60px;
+      }
+   }
+
+   @media(max-width: 500px){
+      width: 40px;
+      background-color: ${colors.white};
+
+      img{
+         width: 30px;
+         height: 30px;
+      }
+   }
 `
 
 export const List = styled.div`
   flex:1;
   padding: 0 20px;
+
+  @media(max-width: 500px){
+      padding:0;
+   }
 `
 
 export const ItemList = styled.div`
@@ -84,5 +132,9 @@ export const ItemList = styled.div`
 
    @media(max-width: 1400px){
       height: 140px;
+   }
+
+   @media(max-width: 750px){
+      height: 130px;
    }
 `

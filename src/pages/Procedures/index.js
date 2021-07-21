@@ -22,11 +22,6 @@ export function Procedures() {
         end: 3
     })
 
-    useEffect(() => {
-        const { start, end } = breakPointsProcedures;
-        console.log(start + " - " + end)
-    }, [breakPointsProcedures])
-
     const handleShowProcedures = (operation) => {
         const { start, end } = breakPointsProcedures;
 
