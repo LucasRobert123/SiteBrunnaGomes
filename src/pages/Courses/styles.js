@@ -2,7 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import colors from '../../styles/colors';
 
 export const Container = styled.section`
-  padding: 80px 24px 0;
+  padding: 80px 24px;
+  min-height: unset !important;
 
     @media(max-width: 1070px){
         display: flex;

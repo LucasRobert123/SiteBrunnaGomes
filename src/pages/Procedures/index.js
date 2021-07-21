@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTransition, animated } from 'react-spring';
 import {
     Container,
     Content,
@@ -16,11 +17,32 @@ import iconChevronRight from '../../assets/svgs/icon-chevron-right.svg';
 import { procedures } from '../../repository'
 
 export function Procedures() {
-    console.log(procedures.length)
+    const [proceduresVisible, setProceduresVisible] = useState([{
+        title: "",
+        description: ""
+    }]);
+
     const [breakPointsProcedures, setBreakPointsProcedures] = useState({
         start: 0,
         end: 3
     })
+
+    useEffect(() => {
+        setProceduresVisible(() => procedures.slice(breakPointsProcedures.start, breakPointsProcedures.end));
+    }, [breakPointsProcedures])
+
+    // useEffect(() => {
+    //     console.log(proceduresVisible)
+    // }, [proceduresVisible])
+
+    const proceduresWithTransitions = useTransition(
+        proceduresVisible,
+        {
+            from: { right: '-120%', opacity: 0 },
+            enter: { right: '0%', opacity: 1 },
+            leave: { right: '-120%', opacity: 0 },
+        },
+    );
 
     const handleShowProcedures = (operation) => {
         const { start, end } = breakPointsProcedures;
@@ -51,15 +73,19 @@ export function Procedures() {
                     <img src={iconChevronLeft} alt="scrool para a esquerda" />
                 </ButtonProcedures>
                 <List>
-                    {procedures.slice(breakPointsProcedures.start, breakPointsProcedures.end).map(item => (
-                        <ItemList key={item.title}>
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                        </ItemList>
+                    {proceduresWithTransitions((style, item) => (
+                        <animated.div
+                            style={style}>
+
+                            <ItemList key={item.title}>
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                            </ItemList>
+                        </animated.div>
                     ))}
                 </List>
                 <ButtonProcedures disabled={breakPointsProcedures.end >= procedures.length}
-                onClick={() => handleShowProcedures('increment')}>
+                    onClick={() => handleShowProcedures('increment')}>
                     <img src={iconChevronRight} alt="scrool para a direita" />
                 </ButtonProcedures>
             </ContainerListProcedures>

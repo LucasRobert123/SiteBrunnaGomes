@@ -68,9 +68,7 @@ export const ButtonProcedures = styled.button`
    background-color: ${colors.secondary}20;
    border-radius: 20px;
    transition: opacity ease 200ms;
-   border: 0;
-   outline: 0;
-
+   
    @media(max-width: 1400px){
       width: 70px;
 
