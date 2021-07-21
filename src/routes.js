@@ -4,7 +4,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage';
 
 const Routes = () => (
-    <BrowserRouter>
+    <BrowserRouter basename="/SiteBrunnaGomes">
         <Switch>
             <Route path="/" component={LandingPage} />
         </Switch>
