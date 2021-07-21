@@ -15,7 +15,10 @@ export const Container = styled.section`
 export const HeaderSection = styled.div`
   display: flex;
   align-items: center;
-  gap: 15px;
+  
+  img{
+      margin-right: 15px;
+  }
 
     @media(max-width: 1400px){
         img{

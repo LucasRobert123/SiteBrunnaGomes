@@ -29,22 +29,22 @@ export function LandingPage() {
         <Content>
           <img src={logoWhite} alt="logo" className="logo-rodape" />
           <Socials>
-            <div>
+            <a href="https://www.instagram.com/brunnagomes.esteta" target="_blank" rel="noreferrer">
               <img src={iconInstagram} alt="instagram" />
               <p>brunnagomes.esteta</p>
-            </div>
-            <div>
+            </a>
+            <a href="https://www.facebook.com/brunna.coffinan" target="_blank" rel="noreferrer">
               <img src={iconFacebook} alt="facebook" />
-              <p>Bruna Gomes</p>
-            </div>
-            <div>
+              <p>Brunna Gomes</p>
+            </a>
+            <a href="https://wa.me/553587122891" target="_blank" rel="noreferrer">
               <img src={iconWhatsapp} alt="whatsapp" />
               <p>35 8712-2891</p>
-            </div>
-            <div>
+            </a>
+            <a href="mailto:brufarma30@outlook.com" target="_blank" rel="noreferrer">
               <img src={iconMail} alt="email" />
               <p>brufarma30@outlook.com</p>
-            </div>
+            </a>
           </Socials>
           <img src={locationDoctor} alt="logo" className="location" />
         </Content>

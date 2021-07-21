@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useTransition, animated } from 'react-spring';
+import { useTransition } from 'react-spring';
 import {
     Container,
     Content,
@@ -42,12 +42,12 @@ export function Procedures() {
 
     const proceduresWithTransitions = useTransition(proceduresVisible, {
         from: {
-            "margin-left": direction === "right" ? "120%" : "-120%",
-            opacity: 0,
+            marginLeft: direction === "right" ? "120%" : "-120%",
+            opacity: 0
         },
-        enter: { "margin-left": "0%", opacity: 1 },
+        enter: { marginLeft: "0%", opacity: 1 },
         leave: {
-            "margin-left": direction === "right" ? "-120%" : "120%",
+            marginLeft: direction === "right" ? "-120%" : "120%",
             opacity: 0,
         },
     });
@@ -77,11 +77,13 @@ export function Procedures() {
             </p>
 
             <ContainerListProcedures>
+
                 <ButtonProcedures disabled={breakPointsProcedures.start === 0}
                     onClick={() => handleShowProcedures('decrement')}
                 >
                     <img src={iconChevronLeft} alt="scrool para a esquerda" />
                 </ButtonProcedures>
+
                 <List>
                     {proceduresWithTransitions((style, item) => (
                         <ItemList key={item.title} style={style}>

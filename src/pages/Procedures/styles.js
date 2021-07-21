@@ -12,7 +12,10 @@ export const Container = styled.section`
 export const HeaderSection = styled.div`
   display: flex;
   align-items: center;
-  gap: 15px;
+
+  img{
+     margin-right: 15px;
+  }
 
   @media(max-width: 1400px){
    img{
@@ -66,7 +69,22 @@ export const ButtonProcedures = styled.button`
    justify-content: center;
    width: 120px;
    height: 100%;
-   background-color: ${colors.secondary}20;
+   background-color: #f3ebe8;
+   z-index:10;
+
+   ${(props) =>
+      props.disabled &&
+      css`
+      filter: brightness(1.2) grayscale(0.25);
+   `}
+
+   img {
+      ${(props) =>
+         props.disabled &&
+         css`
+         filter: brightness(1.5) grayscale(0.5) contrast(0.8);
+         `}
+   }
    border-radius: 20px;
    transition: opacity ease 200ms;
    

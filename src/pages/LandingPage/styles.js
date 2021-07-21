@@ -96,12 +96,15 @@ export const Socials = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:8px;
+  
 
-  div{
+  a{
+    margin-right: 8px;
     color:${colors.white};
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: ${colors.white};
 
     p{
       font-weight: 500;
@@ -116,7 +119,7 @@ export const Socials = styled.div`
 
   @media(max-width:990px){
     flex-direction: row;
-    div{
+    a{
       p{
         font-size: 0px;
       }
@@ -126,7 +129,7 @@ export const Socials = styled.div`
   @media(max-width:800px){
     margin-bottom: 16px;
 
-    div{
+    a{
       img{
         width: 28px;
         height: 28px;
