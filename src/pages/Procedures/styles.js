@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import colors from '../../styles/colors';
+import { animated } from 'react-spring'
 
 export const Container = styled.section`
   padding: 0 16px;
@@ -105,20 +106,21 @@ export const ButtonProcedures = styled.button`
 export const List = styled.div`
   flex:1;
   padding: 0 20px;
-
+  
+  
   @media(max-width: 500px){
       padding:0;
    }
 `
 
-export const ItemList = styled.div`
+export const ItemList = styled(animated.div)`
   width: 100%;
   height: calc(100% / 3);
   border: 1px solid ${colors.secondary}20;
   border-radius: 20px;
   margin-bottom: 8px;
   padding: 20px;
-
+ 
    h3{
       font-weight: 700;
    }

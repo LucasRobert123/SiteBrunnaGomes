@@ -28,23 +28,33 @@ export function Procedures() {
     })
 
     useEffect(() => {
-        setProceduresVisible(() => procedures.slice(breakPointsProcedures.start, breakPointsProcedures.end));
-    }, [breakPointsProcedures])
+        setProceduresVisible([]);
+        const timer = setTimeout(() => {
+            setProceduresVisible(() =>
+                procedures.slice(breakPointsProcedures.start, breakPointsProcedures.end)
+            );
+        }, 750);
+        return () => clearTimeout(timer);
+    }, [breakPointsProcedures]);
 
-    // useEffect(() => {
-    //     console.log(proceduresVisible)
-    // }, [proceduresVisible])
 
-    const proceduresWithTransitions = useTransition(
-        proceduresVisible,
-        {
-            from: { right: '-120%', opacity: 0 },
-            enter: { right: '0%', opacity: 1 },
-            leave: { right: '-120%', opacity: 0 },
+    const [direction, setDirection] = useState("right");
+
+    const proceduresWithTransitions = useTransition(proceduresVisible, {
+        from: {
+            "margin-left": direction === "right" ? "120%" : "-120%",
+            opacity: 0,
         },
-    );
+        enter: { "margin-left": "0%", opacity: 1 },
+        leave: {
+            "margin-left": direction === "right" ? "-120%" : "120%",
+            opacity: 0,
+        },
+    });
 
     const handleShowProcedures = (operation) => {
+        setDirection(operation === "increment" ? "right" : "left");
+
         const { start, end } = breakPointsProcedures;
 
         if (operation === 'increment') {
@@ -74,14 +84,10 @@ export function Procedures() {
                 </ButtonProcedures>
                 <List>
                     {proceduresWithTransitions((style, item) => (
-                        <animated.div
-                            style={style}>
-
-                            <ItemList key={item.title}>
-                                <h3>{item.title}</h3>
-                                <p>{item.description}</p>
-                            </ItemList>
-                        </animated.div>
+                        <ItemList key={item.title} style={style}>
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                        </ItemList>
                     ))}
                 </List>
                 <ButtonProcedures disabled={breakPointsProcedures.end >= procedures.length}
