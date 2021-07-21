@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.js": "/static/js/main.d8742074.chunk.js",
+    "main.js.map": "/static/js/main.d8742074.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.560b7bf6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.560b7bf6.js.map",
+    "static/js/2.b801f8a1.chunk.js": "/static/js/2.b801f8a1.chunk.js",
+    "static/js/2.b801f8a1.chunk.js.map": "/static/js/2.b801f8a1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.b801f8a1.chunk.js.LICENSE.txt": "/static/js/2.b801f8a1.chunk.js.LICENSE.txt",
+    "static/media/about-brunna.ae459093.png": "/static/media/about-brunna.ae459093.png",
+    "static/media/bg-home.4c95446a.png": "/static/media/bg-home.4c95446a.png",
+    "static/media/bruna.5dd78a72.png": "/static/media/bruna.5dd78a72.png",
+    "static/media/icon-avaluation.8656f08c.svg": "/static/media/icon-avaluation.8656f08c.svg",
+    "static/media/icon-chevron-left.279da5f2.svg": "/static/media/icon-chevron-left.279da5f2.svg",
+    "static/media/icon-chevron-right.1a84557c.svg": "/static/media/icon-chevron-right.1a84557c.svg",
+    "static/media/icon-courses.11e9dbe8.svg": "/static/media/icon-courses.11e9dbe8.svg",
+    "static/media/icon-facebook.762bd1dd.svg": "/static/media/icon-facebook.762bd1dd.svg",
+    "static/media/icon-instagram.493061c5.svg": "/static/media/icon-instagram.493061c5.svg",
+    "static/media/icon-mail.9083e94c.svg": "/static/media/icon-mail.9083e94c.svg",
+    "static/media/icon-procedures.db2f7234.svg": "/static/media/icon-procedures.db2f7234.svg",
+    "static/media/icon-whatsapp.47a25ec4.svg": "/static/media/icon-whatsapp.47a25ec4.svg",
+    "static/media/icon-white.4b4347d0.svg": "/static/media/icon-white.4b4347d0.svg",
+    "static/media/icon_education.45d70879.svg": "/static/media/icon_education.45d70879.svg",
+    "static/media/lettering.2a939eb6.svg": "/static/media/lettering.2a939eb6.svg",
+    "static/media/location-doutora.59d22821.svg": "/static/media/location-doutora.59d22821.svg",
+    "static/media/logo-white.35ddd1d3.png": "/static/media/logo-white.35ddd1d3.png",
+    "static/media/logo.b485deb1.png": "/static/media/logo.b485deb1.png",
+    "static/media/ondas-down.b7016436.svg": "/static/media/ondas-down.b7016436.svg",
+    "static/media/ondas-rodape.bb823e3a.svg": "/static/media/ondas-rodape.bb823e3a.svg",
+    "static/media/ondas-top.d329cd3c.svg": "/static/media/ondas-top.d329cd3c.svg",
+    "static/media/wave.2156f88c.svg": "/static/media/wave.2156f88c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.560b7bf6.js",
+    "static/js/2.b801f8a1.chunk.js",
+    "static/js/main.d8742074.chunk.js"
+  ]
+}
