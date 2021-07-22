@@ -51,8 +51,8 @@ export const Header = styled.header`
 
 export const Footer = styled.footer`
   position: relative;
-  img {
-    max-width: 100%;
+  .wave {
+    width: 100%;
     height: auto;
   }
 `;
@@ -61,79 +61,94 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: auto;
-  min-height: 200px;
   background-color: ${colors.secondary};
-  margin-top: -10px;
-  padding: 16px 24px;
+  margin-top: -5px;
+  padding: 30px;
 
-  .logo-rodape{
+  .logo-rodape {
     height: 150px;
   }
-  .location{
+  .location {
     height: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
 
-  @media(max-width:990px){
-    .logo-rodape{
-     height: 120px;
+  .location:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media (min-width: 1920px) {
+    .logo-rodape {
+      height: 200px;
     }
-    .location{
+  }
+
+  @media (max-width: 990px) {
+    .logo-rodape {
+      height: 120px;
+    }
+    .location {
       height: 120px;
     }
   }
 
-  @media(max-width:800px){
+  @media (max-width: 800px) {
     flex-direction: column;
-    .location{
+    .location {
       height: 90px;
     }
   }
-`
+`;
 
 export const Socials = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  
+  justify-content: space-between;
+  height: 150px;
 
-  a{
-    margin-right: 8px;
-    color:${colors.white};
+  a {
+    color: ${colors.white};
     display: flex;
     align-items: center;
     text-decoration: none;
     color: ${colors.white};
+    transition: all 0.3s ease-in-out;
 
-    p{
+    &:hover {
+      transform: scale(1.01);
+      transition: all 0.3s ease-in-out;
+    }
+
+    p {
       font-weight: 500;
     }
 
-    img{
+    img {
       width: 32px;
-      height: 32px;
+      aspect-ratio: 1;
       margin-right: 8px;
     }
   }
 
-  @media(max-width:990px){
+  @media (max-width: 990px) {
     flex-direction: row;
-    a{
-      p{
-        font-size: 0px;
+    height: auto;
+    a {
+      p {
+        display: none;
       }
     }
   }
 
-  @media(max-width:800px){
+  @media (max-width: 800px) {
     margin-bottom: 16px;
 
-    a{
-      img{
+    a {
+      img {
         width: 28px;
-        height: 28px;
       }
     }
   }
-`
+`;
